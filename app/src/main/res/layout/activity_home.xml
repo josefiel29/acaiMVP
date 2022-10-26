@@ -50,8 +50,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginLeft="70dp"
-                        android:text="Pending"
-                        android:textColor="#FF0000"></TextView>
+                        android:text="Answered"
+                        android:textColor="#00FF00"></TextView>
                 </LinearLayout>
             </LinearLayout>
 
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="15dp"
                     android:gravity="right"
-                    android:text="Até 31/10/2022"></TextView>
+                    android:text="Até 18/10/2022"></TextView>
             </LinearLayout>
         </LinearLayout>
 
@@ -132,8 +132,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginLeft="10dp"
-                        android:text="Answered"
-                        android:textColor="#00FF00"></TextView>
+                        android:text="Pending"
+                        android:textColor="#FF0000"></TextView>
                 </LinearLayout>
             </LinearLayout>
 
