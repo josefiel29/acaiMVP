@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D1C4E9">
+    android:background="#BBDEFB"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -39,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginLeft="10dp"
-                        android:text="Enquete sobre a formatação"
+                        android:text="Levantamento Ergonômico"
                         android:textColor="#000000"></TextView>
 
                     <TextView
@@ -47,7 +49,7 @@
                         style="@android:style/TextAppearance.Holo.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginLeft="70dp"
                         android:text="Pending"
                         android:textColor="#FF0000"></TextView>
                 </LinearLayout>
@@ -64,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
-                    android:text="É uma string que pode conter tags de estilo. Você precisa executar o escape de apóstrofos e aspas. Para saber mais sobre como ajustar corretamente o estilo e a formatação das strings, consulte Formatação e estilo abaixo. "
+                    android:text="Olá, SiDiers! Tudo bem por aí? Com o crescimento da nossa sede, gostaríamos de fazer algumas perguntas (coisa de 3 minutos no máximo) relacionadas à ergonomia para vocês.. "
                     android:textColor="#0F0F0F"></TextView>
             </LinearLayout>
 
@@ -81,10 +83,90 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="15dp"
                     android:gravity="right"
-                    android:text="Até 31/10/2022"
-                    android:textColor="#FF0F00"></TextView>
+                    android:text="Até 31/10/2022"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#E1F5FE"
+        app:cardBackgroundColor="#E1F5FE"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            style="@android:style/TextAppearance.Holo.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EDE7F6"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@android:style/TextAppearance.Holo.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title2"
+                        style="@android:style/TextAppearance.Holo.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Pesquisa de Atividades Esportivas"
+                        android:textColor="#000000"></TextView>
+
+                    <TextView
+                        android:id="@+id/status2"
+                        style="@android:style/TextAppearance.Holo.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Answered"
+                        android:textColor="#00FF00"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@android:style/TextAppearance.Holo.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@android:style/TextAppearance.Holo.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="Olá Time !Ainda queremos saber quem gosta de praticar esportes aqui (gritos)? Esse formulário é para identificar SiDiers que tenham interesse em participar de esportes coletivos ⚽🏀🥎🏸🥅🏉( futebol, vôlei, handebol e outros).. "
+                    android:textColor="#0F0F0F"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@android:style/TextAppearance.Holo.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/duedate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right"
+                    android:text="Até 31/10/2022"></TextView>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </LinearLayout>

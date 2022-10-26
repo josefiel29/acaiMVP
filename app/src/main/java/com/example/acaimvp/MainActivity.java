@@ -62,10 +62,11 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     try {
+                        Toast.makeText(MainActivity.this, "Invalid credentials ", Toast.LENGTH_LONG).show();
                         Toast.makeText(MainActivity.this, "Server returned error: " + response.errorBody().string(), Toast.LENGTH_LONG).show();
                         Log.e("Fiel", response.errorBody().string());
                     } catch (IOException e) {
-                        Toast.makeText(MainActivity.this, "Server returned unknown error: ", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Server returned unknown error " , Toast.LENGTH_LONG).show();
                         e.printStackTrace();
                     }
                 }
