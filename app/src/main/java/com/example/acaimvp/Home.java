@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,16 +13,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-
 public class Home extends AppCompatActivity {
 
-    TextView status2;
+    public boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home); //activity_display_message
-        status2 = findViewById(R.id.status2);
+
         CardView cardView1, cardView2;
         cardView1 = findViewById(R.id.cardview1);
 
@@ -37,15 +38,30 @@ public class Home extends AppCompatActivity {
 
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), FakeQuestions.class);
-                startActivity(intent);
+            public void onClick (View view){
+                if (!flag) {
+                    Intent intent = new Intent(getApplicationContext(), FakeQuestions.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "You already answered it", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
-        // Get the Intent that started this activity and extract the string
-        //Intent intent = getIntent();
 
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        flag = true;
+        TextView status2 = findViewById(R.id.status2);
+        status2.setText("Answered");
+        status2.setTextColor(Color.parseColor("green"));
+
+    }
+
 }
 
 

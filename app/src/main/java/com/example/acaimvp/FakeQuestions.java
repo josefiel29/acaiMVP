@@ -2,14 +2,17 @@ package com.example.acaimvp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class FakeQuestions extends AppCompatActivity {
+    public static final String EXTRA_TEXT = "Answered";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +26,12 @@ public class FakeQuestions extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Thanks for your answer!", Toast.LENGTH_LONG).show();
                 setContentView(R.layout.activity_home);
-                Intent intent = new Intent(getApplicationContext(), Home.class);
-                startActivity(intent);
-
+//                Intent intent = new Intent(getApplicationContext(), Home.class);
+//                intent.putExtra(EXTRA_TEXT,"Answered");
+//                startActivity(intent);
+                finish();
             }
         });
-        // Get the Intent that started this activity and extract the string
-        //Intent intent = getIntent();
 
     }
 
